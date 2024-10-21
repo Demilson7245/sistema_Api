@@ -21,7 +21,7 @@ if (!isset($_SESSION['usuario'])) {
     <div class="menu" id="menu"  style="height: 100%;" >
         <h2>Menú</h2>
         <a href="citas.php">Citas</a>
-        <a href="pacientes/listar.php">Pacientes</a>
+        <a href="pacientes/agregar.php">Pacientes</a>
         <a href="medicos.php">Médicos</a>
         <a href="logout.php">Cerrar Sesión</a>
     </div>

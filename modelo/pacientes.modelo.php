@@ -21,28 +21,6 @@ class ModeloPaciente {
     }
 
 
-// // Método para crear un nuevo paciente
-// public static function create($tabla, $data) {
-//     $conexion = conexion::conectar();
-//     $stmt = $conexion->prepare(
-//         "INSERT INTO $tabla (nombre, apellido, fecha_nacimiento, direccion, telefono, correo) 
-//         VALUES (:nombre, :apellido, :fecha_nacimiento, :direccion, :telefono, :correo)"
-//     );
-
-//     // Asociar los datos con los parámetros de la consulta
-//     $stmt->execute([
-//         ":nombre" => $data['nombre'],
-//         ":apellido" => $data['apellido'],
-//         ":fecha_nacimiento" => $data['fecha_nacimiento'],
-//         ":direccion" => $data['direccion'],
-//         ":telefono" => $data['telefono'],
-//         ":correo" => $data['correo']
-//     ]);
-
-//     // Retornar el ID del nuevo registro
-//   //  return $conexion->lastInsertId();
-// }
-
 public static function create($tabla, $data) {
     try {
         $conexion = conexion::conectar();

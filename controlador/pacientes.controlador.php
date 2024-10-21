@@ -1,6 +1,5 @@
 <?php
 
-
 class ControladorPaciente {
 
     public function index() {
@@ -19,32 +18,6 @@ class ControladorPaciente {
         }
     }
 
-
-        // Método para obtener la información de todos los pacientes
-        public static function ctrInfoPacientes() {
-            $tabla = "pacientes"; // Nombre de la tabla en la base de datos
-            $respuesta = ModeloPaciente::index($tabla);
-            return $respuesta;
-        }
-
-
-
-    // public function create() {
-        
-    //     // Obtener los datos del JSON de la solicitud
-    //     $data = json_decode(file_get_contents("php://input"), true);
-
-    //     // Enviar los datos al modelo para crear el nuevo paciente
-    //     ModeloPaciente::create("pacientes", $data);
-    //    // $id =ModeloPaciente::create("pacientes", $data);
-
-    //     // Respuesta con el ID del nuevo paciente y mensaje de éxito
-    //     http_response_code(201);
-    //     echo json_encode([
-    //        // "id" => $id,
-    //         "mensaje" => "Creado correctamente"
-    //     ]);
-    // }
     public function create() {
         // Obtener los datos del JSON de la solicitud
         $data = json_decode(file_get_contents("php://input"), true);
