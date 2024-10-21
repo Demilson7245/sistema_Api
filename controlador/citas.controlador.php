@@ -3,7 +3,14 @@ class ControladorCita{
 
     public function index(){
         $citas = ModeloCita::index("citas");
-        echo json_encode($citas);
+        if ($citas) {
+            http_response_code(200);
+            echo json_encode($citas);
+        }
+        else {
+            http_response_code(200);
+            echo json_encode(array("detalle" => "No hay citas"));
+        }
     }
 
     public function show($id) {
@@ -35,7 +42,7 @@ class ControladorCita{
         // Obtener los datos del JSON de la solicitud
         $data = json_decode(file_get_contents("php://input"), true);
 
-        // Llamar al modelo para actualizar el paciente
+        // Llamar al modelo para actualizar citas
         $resultado = ModeloCita::update(" citas", $id, $data);
 
         // Enviar la respuesta dependiendo del resultado
@@ -44,13 +51,14 @@ class ControladorCita{
             echo json_encode(["mensaje" => "Actualizado correctamente"]);
         } else {
             http_response_code(400);
-            echo json_encode(["mensaje" => "Error al actualizar el paciente"]);
+            echo json_encode(["mensaje" => "Error al actualizar citas"]);
         }
     }
 
 
     public function delete($id) {
         if (ModeloCita::delete("citas", $id)) {
+            http_response_code(200);
             echo json_encode(array("detalle" => "Cita eliminado correctamente"));
         } else {
             http_response_code(404);

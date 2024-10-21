@@ -4,13 +4,20 @@ class ControladorPaciente {
 
     public function index() {
         $pacientes = ModeloPaciente::index("pacientes");
-        echo json_encode($pacientes);
+        if ($pacientes) {
+            http_response_code(200);
+            echo json_encode($pacientes);
+        }else {
+            http_response_code(404);
+            echo json_encode(array("detalle" => "No hay pacientes disponible"));
+        }
     }
 
 
     public function show($id) {
         $paciente = ModeloPaciente::show("pacientes", $id);
         if ($paciente) {
+            http_response_code(200);
             echo json_encode($paciente);
         } else {
             http_response_code(404);
@@ -67,6 +74,7 @@ class ControladorPaciente {
     
     public function delete($id) {
         if (ModeloPaciente::delete("pacientes", $id)) {
+            http_response_code(200);
             echo json_encode(array("detalle" => "Paciente eliminado correctamente"));
         } else {
             http_response_code(404);

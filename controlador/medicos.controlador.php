@@ -3,7 +3,14 @@ class ControladorMedico
 {
     public function index() {
         $medicos = ModeloMedico::index("medicos");
-        echo json_encode($medicos);
+        if ($medicos) {
+            http_response_code(200);
+            echo json_encode($medicos);
+        }
+        else {
+            http_response_code(200);
+            echo json_encode(array("detalle" => "No hay Medicos disponibles"));
+        }
     }
 
     public function authenticate() {
@@ -28,6 +35,7 @@ class ControladorMedico
     public function show($id) {
         $medico = ModeloMedico::show("medicos", $id);
         if ($medico) {
+            http_response_code(200);
             echo json_encode($medico);
         } else {
             http_response_code(404);
@@ -69,6 +77,7 @@ class ControladorMedico
 
     public function delete($id) {
         if (ModeloMedico::delete("medicos", $id)) {
+            http_response_code(200);
             echo json_encode(array("detalle" => "Medico eliminado correctamente"));
         } else {
             http_response_code(404);
