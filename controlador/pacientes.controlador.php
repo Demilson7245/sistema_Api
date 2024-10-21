@@ -20,6 +20,12 @@ class ControladorPaciente {
     }
 
 
+        // Método para obtener la información de todos los pacientes
+        public static function ctrInfoPacientes() {
+            $tabla = "pacientes"; // Nombre de la tabla en la base de datos
+            $respuesta = ModeloPaciente::index($tabla);
+            return $respuesta;
+        }
 
 
 

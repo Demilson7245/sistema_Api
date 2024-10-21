@@ -7,8 +7,12 @@ require_once "controlador/rutas.controlador.php";
 require_once "controlador/citas.controlador.php";
 require_once "controlador/pacientes.controlador.php";
 require_once "controlador/medicos.controlador.php";
-require_once "vistas/controladorVistas/medicos.controlador.php";
-require_once "vistas/modeloVista/medicos.modelo.php";
+
+
+// require_once "vistas/controladorVistas/medicos.controlador.php";
+// require_once "vistas/modeloVista/medicos.modelo.php";
+
+
 // Requerir modelos
 require_once "modelo/pacientes.modelo.php";
 require_once "modelo/medicos.modelo.php";
