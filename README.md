@@ -1,8 +1,8 @@
 # Documentación de la API del Sistema de Gestión Médica
 
-## Integrantes: 
- -Demilson Calivar Pizarro
- -Yoel Cristian Quispe Diaz
+# Integrantes: 
+Demilson Calivar Pizarro
+Yoel Cristian Quispe Diaz
 
 ## Descripción
 Esta API permite gestionar pacientes, médicos y citas a través de endpoints RESTful.
