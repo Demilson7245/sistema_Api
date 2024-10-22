@@ -1,9 +1,7 @@
 # Documentación de la API del Sistema de Gestión Médica
-
 # Integrantes: 
-## Demilson Calivar Pizarro
-## Yoel Cristian Quispe Diaz
-
+### Demilson Calivar Pizarro
+### Yoel Cristian Quispe Diaz
 ## Descripción
 Esta API permite gestionar pacientes, médicos y citas a través de endpoints RESTful.
 
@@ -113,11 +111,7 @@ Esta API permite gestionar pacientes, médicos y citas a través de endpoints RE
 ```json
 {
   "username": "carlosrod",
-<<<<<<< HEAD
   "password": "contraseña123"
-=======
-  "password": "12345"
->>>>>>> feb33af0bd0c80907a04a1907dc9fd415e927699
 }
 ```
 
@@ -137,11 +131,7 @@ Esta API permite gestionar pacientes, médicos y citas a través de endpoints RE
   "telefono": "7778889999",
   "correo": "elena.sanchez@hospital.com",
   "username": "elenasan",
-<<<<<<< HEAD
   "password": "contraseña456"
-=======
-  "password": "12345"
->>>>>>> feb33af0bd0c80907a04a1907dc9fd415e927699
 }
 ```
 
